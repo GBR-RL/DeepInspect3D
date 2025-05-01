@@ -1,9 +1,6 @@
 # DeepInspect3D
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)  
-[![Open3D](https://img.shields.io/badge/Open3D-v0.18.0-brightgreen.svg)](http://www.open3d.org/)  
-[![Blender](https://img.shields.io/badge/Blender-3.6+-orange.svg)](https://www.blender.org/)  
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)[![Open3D](https://img.shields.io/badge/Open3D-v0.18.0-brightgreen.svg)](http://www.open3d.org/)[![Blender](https://img.shields.io/badge/Blender-3.6+-orange.svg)](https://www.blender.org/)[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
@@ -92,12 +89,6 @@ pip install -r requirements.txt
 ### 2. Place STL Models
 
 Put your reference and test `.stl` files in the `data/` directory:
-
-```
-data/
-├── reference_master.stl
-└── test_scanned.stl
-```
 
 ### 3. Launch Pipeline
 
