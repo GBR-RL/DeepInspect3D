@@ -1,0 +1,58 @@
+# config.yaml
+
+# ── PATHS & OUTPUT SETTINGS ───────────────────────────────────────────────────
+models_dir:        "assets/STL"        # Folder containing input 3D model (.stl) files
+output_dir:        "data/rendered"     # Root folder for all rendered outputs
+
+renders_per_model: 1                   # Number of distinct renders to generate per model
+image_resolution: 512                  # Render resolution (px) for both width & height
+samples:          512                  # Number of Cycles path‐trace samples per pixel
+
+# ── ENVIRONMENT (HDRI) ────────────────────────────────────────────────────────
+hdri:
+  path:           "assets/hdri/my_environment.hdr"  # HDRI file for scene illumination
+  strength:       0.8                               # HDRI brightness multiplier
+
+# ── LIGHTING ───────────────────────────────────────────────────────────────────
+lighting:
+  overhead_energy_range: [5, 10]      # Min/max energy (watts) for the overhead area light
+  overhead_size_range:   [2.5, 3.5]   # Min/max size (meters) of the overhead area light
+
+# ── OBJECT TRANSFORMATIONS ─────────────────────────────────────────────────────
+object:
+  jitter_range:        0.5           # Max positional jitter (meters) from origin
+  rotation_range_xy:   [-10, 10]     # Min/max pitch & roll (degrees)
+  rotation_range_z:    [0, 360]      # Min/max yaw (degrees)
+  scale_range:         [0.95, 1.1]   # Min/max uniform scale multiplier
+
+# ── CAMERA SETTINGS ─────────────────────────────────────────────────────────────
+camera:
+  radius_multiplier:   2.5           # Camera distance = radius_multiplier × object size
+  theta_deg_range:     [0, 360]      # Azimuth angles (degrees) around object
+  phi_deg_range:       [10, 40]      # Elevation angles (degrees) above horizon
+  lens_mm_range:       [35, 70]      # Focal length range (mm)
+  dof_aperture_range:  [2.8, 16.0]   # Aperture (f-stop) range for Depth of Field
+  sensor_width_range:  [18.0, 36.0]  # Sensor physical width range (mm)
+  sensor_height_range: [12.0, 24.0]  # Sensor physical height range (mm)
+  pixel_aspect_x_range: [0.9, 1.1]   # Horizontal pixel aspect ratio range
+  pixel_aspect_y_range: [0.9, 1.1]   # Vertical pixel aspect ratio range
+  exposure_range:      [-0.5, -0.1]  # Filmic exposure range (EV units)
+
+# ── DEPTH MAP SETTINGS ──────────────────────────────────────────────────────────
+depth:
+  clip_start:          null          # (Optional) override camera clip start (meters)
+  clip_end:            null          # (Optional) override camera clip end (meters)
+  png_subdir:          "depth_png"   # Subfolder for normalized 16-bit depth PNGs
+  depth_scale:         1000.0        # Scale factor (depth unit → integer I/O)
+
+# ── OUTPUT SUBDIRECTORIES ───────────────────────────────────────────────────────
+outputs:
+  rgb_subdir:          "rgb"         # Subfolder for color renders
+  normal_subdir:       "normal"      # Subfolder for normal-map outputs
+
+# ── MATERIAL PRESETS ────────────────────────────────────────────────────────────
+material:
+  steel_texture:      "assets/texture/steel.png"  # Albedo map for PBR material
+  metallic:           1.0        # Metallic factor (0 = non-metal, 1 = metal)
+  roughness:          0.9        # Surface roughness (0 = smooth, 1 = matte)
+  specular:           0.2        # Specular intensity for non-metals
