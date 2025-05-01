@@ -1,4 +1,3 @@
-![DeepInspect3D Banner](https://raw.githubusercontent.com/gbr-rl/DeepInspect3D/main/docs/banner.png)
 
 # DeepInspect3D - 3D Mesh Inspection with Open3D-Based Point Cloud Alignment, Defect Localization, and Metric Evaluation
 
