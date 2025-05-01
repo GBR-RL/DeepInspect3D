@@ -1,16 +1,22 @@
-# DeepInspect3D
+![DeepInspect3D Banner](https://raw.githubusercontent.com/gbr-rl/DeepInspect3D/main/docs/banner.png)
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)[![Open3D](https://img.shields.io/badge/Open3D-v0.18.0-brightgreen.svg)](http://www.open3d.org/)[![Blender](https://img.shields.io/badge/Blender-3.6+-orange.svg)](https://www.blender.org/)[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+# DeepInspect3D - 3D Mesh Inspection with Open3D-Based Point Cloud Alignment, Defect Localization, and Metric Evaluation
 
----
+![Computer Vision](https://img.shields.io/badge/Project-Computer%20Vision-blue)
+![Image Processing](https://img.shields.io/badge/Project-Image%20Processing-yellow)
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.5-green)
+[![Made with Blender](https://img.shields.io/badge/rendered%20with-blender-orange?logo=blender)](https://www.blender.org/)
+[![Open3D](https://img.shields.io/badge/Built%20with-Open3D-1f425f.svg?logo=Open3D&logoColor=white)](http://www.open3d.org/)
+
 
 **DeepInspect3D** delivers an extensible 3D inspection pipeline for high-precision geometric defect detection in mechanical components. It integrates photorealistic synthetic rendering, point cloud generation, multi-stage filtering, FPFH+ICP alignment, and deviation field analysis against CAD ground truth, enabling automated metrology-grade evaluation and quality assurance.
 
 ---
 
-## Project Structure
+## Project Structure Overview
 
-```
+```plaintext
 DeepInspect3D/
 ├── notebook/
 │   └── inspection_pipeline.ipynb      # Unified inspection notebook
@@ -123,20 +129,11 @@ Outputs are saved in `blender_assets/outputs/`:
 
 ## Requirements
 
-- Python 3.9+  
-- Open3D  
-- NumPy  
-- Matplotlib  
-- PyYAML  
-- tqdm  
-- Blender 3.6+  
-
 Install via:
 
 ```bash
 pip install -r requirements.txt
 ```
-
 ---
 
 ## Applications
