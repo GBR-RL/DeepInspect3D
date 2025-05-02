@@ -10,7 +10,7 @@
 [![Open3D](https://img.shields.io/badge/Built%20with-Open3D-1f425f.svg?logo=Open3D&logoColor=white)](http://www.open3d.org/)
 
 
-**DeepInspect3D** delivers an extensible 3D inspection pipeline for high-precision geometric defect detection in mechanical components. It integrates photorealistic synthetic rendering, point cloud generation, multi-stage filtering, FPFH+ICP alignment, and deviation field analysis against CAD ground truth, enabling automated metrology-grade evaluation and quality assurance.
+**DeepInspect3D** delivers an extensible 3D inspection pipeline for high-precision geometric defect detection in mechanical components. It integrates photorealistic synthetic rendering using Blender, point cloud generation, multi-stage filtering, FPFH+ICP alignment, and deviation field analysis against CAD ground truth, enabling automated metrology-grade evaluation and quality assurance.
 
 ---
 
